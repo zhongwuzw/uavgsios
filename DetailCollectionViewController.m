@@ -24,6 +24,7 @@ static NSString * const reuseIdentifier = @"Cell";
     
     // Register cell classes
     [self.collectionView registerClass:[PhotoCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    self.collectionView.pagingEnabled = YES;
     
     // Do any additional setup after loading the view.
 }
@@ -51,7 +52,7 @@ static NSString * const reuseIdentifier = @"Cell";
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 27;
+    return 25;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -65,7 +66,8 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(90.00, 90.00);
+ //   CGRect rect = [[UIScreen mainScreen] applicationFrame];
+    return CGSizeMake(self.view.frame.size.width, self.view.frame.size.height);
 }
 
 #pragma mark <UICollectionViewDelegate>

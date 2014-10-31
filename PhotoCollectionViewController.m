@@ -43,7 +43,7 @@ static NSString * const reuseIdentifier = @"Cell";
 {
     _selectedItem = indexPath;
     UICollectionViewFlowLayout *layOut = [[UICollectionViewFlowLayout alloc] init];
-    layOut.scrollDirection = UICollectionViewScrollDirectionVertical;
+    layOut.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     
     DetailCollectionViewController *dcv = [[DetailCollectionViewController alloc] initWithCollectionViewLayout:layOut];
     dcv.useLayoutToLayoutNavigationTransitions = YES;
@@ -78,12 +78,12 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 3;
+    return 1;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 15;
+    return 25;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {

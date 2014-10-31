@@ -12,20 +12,24 @@
 	<dict>
 		<key>9DE516C226768E9751EC0423B63C0D166CE42093</key>
 		<string>http://svn.boloomo.com:7990/scm/uavgs/uavgsios.git</string>
+		<key>DC6CE5A2A71F5ACC179A85539243F78C7396345A</key>
+		<string>https://github.com/zhongwuzw/uavgsios.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>UAVGS.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>9DE516C226768E9751EC0423B63C0D166CE42093</key>
+		<string>../../../UAVGS_IOS_1</string>
+		<key>DC6CE5A2A71F5ACC179A85539243F78C7396345A</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>http://svn.boloomo.com:7990/scm/uavgs/uavgsios.git</string>
+	<string>https://github.com/zhongwuzw/uavgsios.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>9DE516C226768E9751EC0423B63C0D166CE42093</string>
+	<string>DC6CE5A2A71F5ACC179A85539243F78C7396345A</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -35,6 +39,14 @@
 			<string>9DE516C226768E9751EC0423B63C0D166CE42093</string>
 			<key>IDESourceControlWCCName</key>
 			<string>UAVGS_IOS_1</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DC6CE5A2A71F5ACC179A85539243F78C7396345A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>uavgsios</string>
 		</dict>
 	</array>
 </dict>
