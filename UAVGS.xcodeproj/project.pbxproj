@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		014883E91A037E43008104EB /* TransitionAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 014883E81A037E43008104EB /* TransitionAnimation.m */; };
 		0168558319F636AA002DC7A1 /* DetailCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0168558219F636AA002DC7A1 /* DetailCollectionViewController.m */; };
 		01A4927619EBA02700DE34E2 /* GoProStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A4927519EBA02700DE34E2 /* GoProStatus.m */; };
 		01A4927919EBA03E00DE34E2 /* LiveDownloadTSEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A4927819EBA03E00DE34E2 /* LiveDownloadTSEngine.m */; };
@@ -504,6 +505,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		014883E71A037E43008104EB /* TransitionAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionAnimation.h; sourceTree = "<group>"; };
+		014883E81A037E43008104EB /* TransitionAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionAnimation.m; sourceTree = "<group>"; };
 		0168558119F636AA002DC7A1 /* DetailCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailCollectionViewController.h; sourceTree = "<group>"; };
 		0168558219F636AA002DC7A1 /* DetailCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailCollectionViewController.m; sourceTree = "<group>"; };
 		01A4927419EBA02700DE34E2 /* GoProStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoProStatus.h; sourceTree = "<group>"; };
@@ -1078,6 +1081,8 @@
 				01A4927719EBA03E00DE34E2 /* LiveDownloadTSEngine.h */,
 				01B68CD419ECFD6C0033C4F3 /* PhotoCollectionViewController.h */,
 				01B68CD519ECFD6C0033C4F3 /* PhotoCollectionViewController.m */,
+				014883E71A037E43008104EB /* TransitionAnimation.h */,
+				014883E81A037E43008104EB /* TransitionAnimation.m */,
 				01B68CD819ED2D340033C4F3 /* PhotoCollectionViewCell.h */,
 				01B68CD919ED2D340033C4F3 /* PhotoCollectionViewCell.m */,
 				01A4927819EBA03E00DE34E2 /* LiveDownloadTSEngine.m */,
@@ -2328,6 +2333,7 @@
 				01BC36A019D2CC2D00B94DF3 /* UIAlertView+MKNetworkKitAdditions.m in Sources */,
 				01BC369C19D2CC2D00B94DF3 /* NSData+MKBase64.m in Sources */,
 				189805B519D1814C00F99413 /* BarController.m in Sources */,
+				014883E91A037E43008104EB /* TransitionAnimation.m in Sources */,
 				18F8B42919CC179E004679D8 /* CustomUIView.m in Sources */,
 				01BC369D19D2CC2D00B94DF3 /* NSDate+RFC1123.m in Sources */,
 				95257C3219CA8B2D00AC4D31 /* AnimationTest.m in Sources */,

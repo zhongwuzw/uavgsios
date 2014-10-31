@@ -45,25 +45,38 @@ static NSString * const reuseIdentifier = @"Cell";
     UICollectionViewFlowLayout *layOut = [[UICollectionViewFlowLayout alloc] init];
     layOut.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     
-    DetailCollectionViewController *dcv = [[DetailCollectionViewController alloc] initWithCollectionViewLayout:layOut];
-    dcv.useLayoutToLayoutNavigationTransitions = YES;
-    [self.navigationController pushViewController:dcv animated:YES];
+    PhotoCollectionViewCell *cell = (PhotoCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    self.imageView = cell.imageView;
+    
+    self.dcv = [[DetailCollectionViewController alloc] initWithCollectionViewLayout:layOut];
+    self.dcv.transitioningDelegate = self;
+  //  self.dcv.useLayoutToLayoutNavigationTransitions = YES;
+    [self presentViewController:self.dcv animated:YES completion:nil];
+//    [self.navigationController pushViewController:self.dcv animated:YES];
 }
 
-- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
 {
-    if ([viewController isKindOfClass:[DetailCollectionViewController class]]) {
-        DetailCollectionViewController *dvc = (DetailCollectionViewController *)viewController;
-        dvc.collectionView.dataSource = dvc;
-        dvc.collectionView.delegate = dvc;
-        [dvc.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:_selectedItem.row inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredVertically animated:NO];
+    if ([presented isKindOfClass:[DetailCollectionViewController class]]) {
+        return [[TransitionAnimation alloc] initWithReferenceImage:self.imageView];
     }
-    else if (viewController == self)
-    {
-        self.collectionView.dataSource = self;
-        self.collectionView.delegate = self;
-    }
+    return nil;
 }
+
+//- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated
+//{
+//    if ([viewController isKindOfClass:[DetailCollectionViewController class]]) {
+//        DetailCollectionViewController *dvc = (DetailCollectionViewController *)viewController;
+//        dvc.collectionView.dataSource = dvc;
+//        dvc.collectionView.delegate = dvc;
+//        [dvc.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:_selectedItem.row inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredVertically animated:NO];
+//    }
+//    else if (viewController == self)
+//    {
+//        self.collectionView.dataSource = self;
+//        self.collectionView.delegate = self;
+//    }
+//}
 
 /*
 #pragma mark - Navigation

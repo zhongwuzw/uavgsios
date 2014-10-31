@@ -413,9 +413,10 @@ typedef enum {HighPerformance,LowPerformance} PerformanceMode;
     pcc.useLayoutToLayoutNavigationTransitions = NO;
 
   //  shitViewController *shit = [[shitViewController alloc] init];
-    UINavigationController *unc = [[UINavigationController alloc] initWithRootViewController:pcc];
-    unc.delegate = pcc;
-    self.photoPopViewController = [[UIPopoverController alloc] initWithContentViewController:unc];
+//    UINavigationController *unc = [[UINavigationController alloc] initWithRootViewController:pcc];
+//    unc.delegate = pcc;
+    self.photoPopViewController = [[UIPopoverController alloc] initWithContentViewController:pcc];
+    self.photoPopViewController.popoverContentSize = CGSizeMake(self.view.frame.size.width,self.view.frame.size.height);
     [self.photoPopViewController presentPopoverFromRect:CGRectMake(10, 20, 30, 30) inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
 
 //    [self presentViewController:unc animated:YES completion:nil];
